@@ -15,7 +15,7 @@ export interface ProductType {
   discountedPrice?: number
   price: number
   category: string
-  quantity: number
+  quantity?: number
 }
 
 interface PropsType {

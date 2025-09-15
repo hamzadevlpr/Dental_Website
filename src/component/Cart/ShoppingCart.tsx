@@ -14,16 +14,16 @@ export default function ShoppingCart() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cartSlice.items);
   const subtotal = cartItems.reduce(
-    (sum: number, p: ProductType) => sum + p.price * p.quantity,
+    (sum: number, p: ProductType) => sum + p.price * (p.quantity || 1),
     0
   );
 
   const handleCheckout = () => {
-    router.push('/checkout');
-  }
+    router.push("/checkout");
+  };
 
-  if(cartItems.length === 0) {
-    return <EmptyCart />
+  if (cartItems.length === 0) {
+    return <EmptyCart />;
   }
   return (
     <div className="bg-gray-50 py-10 px-4 sm:px-8">
@@ -81,7 +81,7 @@ export default function ShoppingCart() {
                     </div>
                   </td>
                   <td className="font-medium text-gray-800">
-                    PKR {p.price * p.quantity}
+                    PKR {p.price * (p.quantity || 1)}
                   </td>
                   <td>
                     <button
@@ -128,7 +128,10 @@ export default function ShoppingCart() {
               Apply
             </button>
           </div>
-          <button onClick={handleCheckout} className="mt-3 w-full py-3 rounded-md font-medium text-white bg-[#14a085] hover:bg-[#11806c] focus:ring focus:ring-[#14a085] focus:outline-none">
+          <button
+            onClick={handleCheckout}
+            className="mt-3 w-full py-3 rounded-md font-medium text-white bg-[#14a085] hover:bg-[#11806c] focus:ring focus:ring-[#14a085] focus:outline-none"
+          >
             Proceed to Checkout
           </button>
 

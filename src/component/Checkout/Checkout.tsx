@@ -1,13 +1,13 @@
 "use client";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
-import { CartItem } from "@/redux/cartSlice";
 import { useState } from "react";
+import { ProductType } from "../ProductCard";
 
 export default function Checkout() {
   const cartItems = useSelector((state: RootState) => state.cartSlice.items);
   const subtotal = cartItems.reduce(
-    (sum: number, p: CartItem) => sum + p.price * p.quantity,
+    (sum: number, p: ProductType) => sum + p.price * (p.quantity || 1),
     0
   );
   const shipping = subtotal > 50000 ? 0 : 500; // free shipping for large orders
@@ -66,12 +66,12 @@ export default function Checkout() {
         {/* Order Summary */}
         <div className="bg-white rounded-xl shadow p-6">
           <h2 className="text-lg font-semibold mb-4">Order Summary</h2>
-          {cartItems.map((p: CartItem) => (
+          {cartItems.map((p: ProductType) => (
             <div key={p.id} className="flex justify-between text-sm mb-2">
               <span>
                 {p.title} × {p.quantity}
               </span>
-              <span>PKR {p.price * p.quantity}</span>
+              <span>PKR {p.price * (p.quantity || 1)}</span>
             </div>
           ))}
           <hr className="my-4" />
