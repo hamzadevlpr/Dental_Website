@@ -1,9 +1,7 @@
+"use client";
 import ProductCard from "@/component/ProductCard";
 import ProductPage from "@/component/Products/ProductPage";
-import React from "react";
 import { products } from "@/lib/Constant";
-import { Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 

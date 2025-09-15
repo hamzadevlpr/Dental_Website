@@ -18,14 +18,14 @@ const Navbar = () => {
 
 
                     {/* Logo */}
-                    <div className="flex items-center gap-3">
+                    <Link href={"/"} className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-[#14a085] rounded-lg flex items-center justify-center">
                             <Image src={logo} alt="logo" width={30} height={30} className="object-contain" />
                         </div>
                         <div className="text-base sm:text-lg font-bold text-[#14a085]">
                             FAROOQUE DENTAL MART
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Search bar (center on desktop, full on mobile) */}
                     <div className="w-full md:max-w-lg md:mx-auto relative">

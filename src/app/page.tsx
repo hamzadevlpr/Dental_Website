@@ -5,7 +5,6 @@ import ProductCard from "@/component/ProductCard";
 import { products } from "@/lib/Constant";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -43,7 +42,7 @@ export default function Home() {
         </div>
         <div>
           <h2 className="mb-5 text-[28px] font-medium text-black border-b border-[#14a085]">
-          Disposables
+            Disposables
           </h2>
 
           {/* Swiper Slider for Products */}
@@ -69,7 +68,7 @@ export default function Home() {
         </div>
         <div>
           <h2 className="mb-5 text-[28px] font-medium text-black border-b border-[#14a085]">
-          Periodontics
+            Periodontics
           </h2>
 
           {/* Swiper Slider for Products */}
@@ -95,7 +94,7 @@ export default function Home() {
         </div>
         <div>
           <h2 className="mb-5 text-[28px] font-medium text-black border-b border-[#14a085]">
-          Prosthodontics
+            Prosthodontics
           </h2>
 
           {/* Swiper Slider for Products */}
