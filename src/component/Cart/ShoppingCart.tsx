@@ -19,11 +19,11 @@ export default function ShoppingCart() {
   );
 
   const handleCheckout = () => {
-    router.push('/checkout');
-  }
+    router.push("/checkout");
+  };
 
-  if(cartItems.length === 0) {
-    return <EmptyCart />
+  if (cartItems.length === 0) {
+    return <EmptyCart />;
   }
   return (
     <div className="bg-gray-50 py-10 px-4 sm:px-8">

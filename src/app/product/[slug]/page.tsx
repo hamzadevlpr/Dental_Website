@@ -1,10 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import ProductCard from "@/component/ProductCard";
 import shoes01 from "../../../assets/shoes01.jpg";
 import shoes04 from "../../../assets/shoes06.jpg";
+import "swiper/css";
+import "swiper/css/navigation";
+import { useState } from "react";
 import Image from "next/image";
 
-const Product = () => {
+export default function Page() {
   const [images] = useState({
     img1: shoes01,
     img2: shoes04,
@@ -14,7 +17,6 @@ const Product = () => {
 
   const [activeImg, setActiveImage] = useState(shoes01);
   const [amount, setAmount] = useState(1);
-
   return (
     <div className="bg-gray-100 py-16">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 lg:items-start px-6">
@@ -39,11 +41,10 @@ const Product = () => {
                 height={100}
                 src={img.src}
                 alt={`sneaker-${index}`}
-                className={`w-20 h-20 md:w-24 md:h-24 rounded-lg cursor-pointer object-cover border transition-all duration-300 hover:scale-105 hover:shadow-md ${
-                  activeImg === img
-                    ? "border-2 border-brand-primary shadow-lg"
-                    : "border-gray-200"
-                }`}
+                className={`w-20 h-20 md:w-24 md:h-24 rounded-lg cursor-pointer object-cover border transition-all duration-300 hover:scale-105 hover:shadow-md ${activeImg === img
+                  ? "border-2 border-brand-primary shadow-lg"
+                  : "border-gray-200"
+                  }`}
                 onClick={() => setActiveImage(img)}
               />
             ))}
@@ -114,6 +115,4 @@ const Product = () => {
       </div>
     </div>
   );
-};
-
-export default Product;
+}

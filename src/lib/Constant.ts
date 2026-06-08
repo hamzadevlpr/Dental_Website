@@ -400,5 +400,133 @@ export const products = [
         "updatedAt": "2025-09-07T13:45:00Z"
       }
   ]
+
+export const brands = [
+  {
+    name: "Apple Dental",
+    logo: "https://humayundental.com/wp-content/uploads/2022/02/3-1-185x121.png",
+    description: "A global leader in dental products and technologies, offering innovative solutions for dental professionals.",
+    website: "https://www.dentsplysirona.com"
+  },
+  {
+    name: "Dentsply Sirona",
+    logo: "https://www.dentsplysirona.com/content/dam/dentsply-sirona/brand/logos/dentsply-sirona-logo.png",
+    description: "A global leader in dental products and technologies, offering innovative solutions for dental professionals.",
+    website: "https://www.dentsplysirona.com"
+  }
+] 
   
+// categories.ts
+
+export const Categories = [
+  {
+    id: 15,
+    name: "General Dentistry",
+    url: "https://www.dentalstation.co/en/collection/general-dentistry",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/Dentestry.svg",
+  },
+  {
+    id: 99,
+    name: "Consumables",
+    url: "https://www.dentalstation.co/en/collection/consumables",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/corona.svg",
+  },
+  {
+    id: 18,
+    name: "Endodontics",
+    url: "https://www.dentalstation.co/en/collection/endodontics",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/Endodontics.svg",
+  },
+  {
+    id: 20,
+    name: "Orthodontics",
+    url: "https://www.dentalstation.co/en/collection/orthodontics",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/Orthodontics.svg",
+  },
+  {
+    id: 94,
+    name: "Instruments",
+    url: "https://www.dentalstation.co/en/collection/instruments",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/Instruments.svg",
+  },
+  {
+    id: 17,
+    name: "Equipments",
+    url: "https://www.dentalstation.co/en/collection/equipments",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/equipment.svg",
+  },
+  {
+    id: 19,
+    name: "Paedodontics",
+    url: "https://www.dentalstation.co/en/collection/paedodontics",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/Paedodontics.svg",
+  },
+  {
+    id: 21,
+    name: "Prosthodontics",
+    url: "https://www.dentalstation.co/en/collection/prosthodontics",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/Prosthodontics.svg",
+  },
+  {
+    id: 92,
+    name: "Periodontics",
+    url: "https://www.dentalstation.co/en/collection/periodontics",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/Periodontics.svg",
+  },
+  {
+    id: 93,
+    name: "Oral Surgery",
+    url: "https://www.dentalstation.co/en/collection/oral-surgery",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/OralSurgery.svg",
+  },
+  {
+    id: 95,
+    name: "Implantology",
+    url: "https://www.dentalstation.co/en/collection/implantology",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/Implantology.svg",
+  },
+  {
+    id: 96,
+    name: "Sterilization",
+    url: "https://www.dentalstation.co/en/collection/sterilization",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/Sterilization.svg",
+  },
+  {
+    id: 421,
+    name: "Oral Care",
+    url: "https://www.dentalstation.co/en/collection/oral-care",
+    icon: "https://dentalstation.co/public/uploads/CATEGORYYYYY/total%20etch%20bonds.svg",
+  },
+  {
+    id: 408,
+    name: "Clothing & Uniforms",
+    url: "https://www.dentalstation.co/en/collection/clothing-uniforms",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/e-textiles.svg",
+  },
+  {
+    id: 355,
+    name: "Photography",
+    url: "https://www.dentalstation.co/en/collection/photography",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/photo.svg",
+  },
+  {
+    id: 403,
+    name: "Learning & Training",
+    url: "https://www.dentalstation.co/en/collection/learning-training",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/2201487.svg",
+  },
+  {
+    id: 346,
+    name: "Maintenance",
+    url: "https://www.dentalstation.co/en/collection/maintenance",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/Noun_Project_maintenance_icon_943595_cc.svg",
+  },
+  {
+    id: 97,
+    name: "Laboratory",
+    url: "https://www.dentalstation.co/en/collection/laboratory",
+    icon: "https://dentalstation.co/public/uploads/dentists_icons/Laboratory.svg",
+  },
+];
+
   
