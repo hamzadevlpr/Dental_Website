@@ -18,7 +18,7 @@ export default function ForgotPasswordPage() {
     <div>
       <h2 className="text-2xl font-bold mb-6">Forgot Password</h2>
       {sent ? (
-        <p className="text-green-600">Reset link sent to your email ✅</p>
+        <p className="text-brand-secondary font-semibold">Reset link sent to your email ✅</p>
       ) : (
         <form onSubmit={handleForgot} className="space-y-4">
           <Input type="email" placeholder="Enter your email" required />

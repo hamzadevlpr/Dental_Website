@@ -46,19 +46,19 @@ export default function Hero() {
                     modules={[Navigation, Autoplay, Pagination]}
                     autoplay={{ delay: 3000 }}
                     loop
-                    className="rounded-lg border border-[#14a085]"
+                    className="rounded-lg border border-brand-primary"
                 >
                     {slides.map((slide) => (
                         <SwiperSlide key={slide.id}>
                             <div className="flex flex-col-reverse md:flex-row items-center justify-between  px-5 py-5 md:px-14 rounded-xl w-full md:h-[380px]">
                                 {/* Left Content */}
                                 <div className="md:pl-8 mt-10 md:mt-0 text-center md:text-left">
-                                    <p className="md:text-base text-[#14a085] pb-1">{slide.offer}</p>
+                                    <p className="md:text-base text-brand-primary pb-1">{slide.offer}</p>
                                     <h1 className="max-w-lg md:text-[40px] md:leading-[48px] text-2xl font-semibold">
                                         {slide.title}
                                     </h1>
                                     <div className="flex items-center mt-4 md:mt-6 justify-center md:justify-start">
-                                        <button className="md:px-10 px-7 md:py-2.5 py-2 bg-[#14a085] rounded-full text-white font-medium">
+                                        <button className="md:px-10 px-7 md:py-2.5 py-2 bg-brand-primary rounded-full text-white font-medium hover:bg-brand-primaryDark transition-colors cursor-pointer">
                                             Buy now
                                         </button>
                                         <button className="group flex items-center gap-2 px-6 py-2.5 font-medium">

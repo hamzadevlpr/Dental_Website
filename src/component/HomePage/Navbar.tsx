@@ -19,10 +19,10 @@ const Navbar = () => {
 
                     {/* Logo */}
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-[#14a085] rounded-lg flex items-center justify-center">
+                        <div className="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center">
                             <Image src={logo} alt="logo" width={30} height={30} className="object-contain" />
                         </div>
-                        <div className="text-base sm:text-lg font-bold text-[#14a085]">
+                        <div className="text-base sm:text-lg font-bold text-brand-primary">
                             FAROOQUE DENTAL MART
                         </div>
                     </div>
@@ -31,7 +31,7 @@ const Navbar = () => {
                     <div className="w-full md:max-w-lg md:mx-auto relative">
                         <input
                             className="flex h-10 w-full rounded-xl border border-gray-300 bg-background px-3 py-2 text-sm sm:text-base 
-              placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#14a085] focus-visible:ring-offset-1"
+              placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-1"
                             placeholder="Search for product"
                         />
                         <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -39,16 +39,16 @@ const Navbar = () => {
 
                     {/* Right actions */}
                     <div className="flex items-center  lg:justify-end justify-between gap-6">
-                        <Link href="/auth/login" className="flex items-center gap-2 cursor-pointer">
+                        <Link href="/auth/login" className="flex items-center gap-2 cursor-pointer hover:text-brand-primary transition-colors">
                             <User className="w-5 h-5" />
                             <span className="inline text-sm font-medium">LOGIN / SIGNUP</span>
                         </Link>
-                        <Link href="/my-cart" className="flex items-center gap-2 cursor-pointer">
+                        <Link href="/my-cart" className="flex items-center gap-2 cursor-pointer hover:text-brand-primary transition-colors">
                             <ShoppingCart className="w-5 h-5" />
                             <span className="inline text-sm font-medium">MY CART</span>
                             {
                                 cartItems > 0 && (
-                                    <span className="w-4 h-4 inline-flex items-center justify-center text-[8px] font-bold leading-none text-white bg-[#14a085] rounded-full">
+                                    <span className="w-4 h-4 inline-flex items-center justify-center text-[8px] font-bold leading-none text-white bg-brand-primary rounded-full">
                                         {cartItems}
                                     </span>
                                 )

@@ -26,9 +26,9 @@ export default function NavLinks() {
               key={item}
               href="#"
               className="relative text-sm font-medium text-foreground transition-colors duration-200
-                         hover:text-[#14a085]
+                         hover:text-brand-primary
                          after:absolute after:left-0 after:-bottom-2 after:w-full
-                         after:border-b-2 after:border-[#14a085] after:scale-x-0
+                         after:border-b-2 after:border-brand-primary after:scale-x-0
                          hover:after:scale-x-100 after:transition-transform after:duration-200
                          after:origin-center"
             >
@@ -51,7 +51,7 @@ export default function NavLinks() {
               <a
                 key={item}
                 href="#"
-                className="text-sm font-medium text-foreground hover:text-[#14a085] transition-colors"
+                className="text-sm font-medium text-foreground hover:text-brand-primary transition-colors"
               >
                 {item}
               </a>

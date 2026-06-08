@@ -41,7 +41,7 @@ const Product = () => {
                 alt={`sneaker-${index}`}
                 className={`w-20 h-20 md:w-24 md:h-24 rounded-lg cursor-pointer object-cover border transition-all duration-300 hover:scale-105 hover:shadow-md ${
                   activeImg === img
-                    ? "border-2 border-[#14a085] shadow-lg"
+                    ? "border-2 border-brand-primary shadow-lg"
                     : "border-gray-200"
                 }`}
                 onClick={() => setActiveImage(img)}
@@ -54,7 +54,7 @@ const Product = () => {
         <div className="flex flex-col gap-6 lg:w-2/4 bg-white p-8 rounded-xl shadow-lg">
           {/* Heading */}
           <div>
-            <span className="text-[#14a085] font-semibold text-sm uppercase tracking-wide">
+            <span className="text-brand-primary font-semibold text-sm uppercase tracking-wide">
               Special Sneaker
             </span>
             <h1 className="text-3xl font-bold mt-2 text-gray-800">
@@ -72,14 +72,14 @@ const Product = () => {
           </p>
 
           {/* Price */}
-          <h6 className="text-3xl font-bold text-[#14a085]">$199.00</h6>
+          <h6 className="text-3xl font-bold text-brand-primary">$199.00</h6>
 
           {/* Quantity + Cart */}
           <div className="flex flex-row items-center gap-8 mt-4">
             {/* Quantity Selector */}
             <div className="flex items-center border rounded-lg overflow-hidden">
               <button
-                className="bg-gray-200 py-2 px-4 text-xl font-bold text-gray-700 hover:bg-[#14a085] hover:text-white transition"
+                className="bg-gray-200 py-2 px-4 text-xl font-bold text-gray-700 hover:bg-brand-primary hover:text-white transition cursor-pointer"
                 onClick={() => setAmount((prev) => Math.max(prev - 1, 1))}
               >
                 -
@@ -88,7 +88,7 @@ const Product = () => {
                 {amount}
               </span>
               <button
-                className="bg-gray-200 py-2 px-4 text-xl font-bold text-gray-700 hover:bg-[#14a085] hover:text-white transition"
+                className="bg-gray-200 py-2 px-4 text-xl font-bold text-gray-700 hover:bg-brand-primary hover:text-white transition cursor-pointer"
                 onClick={() => setAmount((prev) => prev + 1)}
               >
                 +
@@ -96,17 +96,17 @@ const Product = () => {
             </div>
 
             {/* Add to Cart */}
-            <button className="bg-[#14a085] text-white font-semibold py-3 px-10 rounded-lg shadow-md transition-all duration-300 hover:bg-[#117766] hover:shadow-lg">
+            <button className="bg-brand-primary text-white font-semibold py-3 px-10 rounded-lg shadow-md transition-all duration-300 hover:bg-brand-primaryDark hover:shadow-lg cursor-pointer">
               Add to Cart
             </button>
           </div>
 
           {/* Extra Buttons */}
           <div className="flex gap-4 mt-6">
-            <button className="flex-1 border border-gray-300 py-3 rounded-lg text-gray-600 font-medium hover:border-[#14a085] hover:text-[#14a085] transition">
+            <button className="flex-1 border border-gray-300 py-3 rounded-lg text-gray-600 font-medium hover:border-brand-primary hover:text-brand-primary transition cursor-pointer">
               Add to Wishlist
             </button>
-            <button className="flex-1 border border-gray-300 py-3 rounded-lg text-gray-600 font-medium hover:border-[#14a085] hover:text-[#14a085] transition">
+            <button className="flex-1 border border-gray-300 py-3 rounded-lg text-gray-600 font-medium hover:border-brand-primary hover:text-brand-primary transition cursor-pointer">
               Share
             </button>
           </div>

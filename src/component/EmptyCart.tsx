@@ -25,7 +25,7 @@ export default function EmptyCart() {
       {/* Action Button */}
       <button
         onClick={() => router.push("/products")}
-        className="mt-6 px-6 py-3 rounded-lg bg-[#14a085] text-white font-medium hover:bg-[#11806c] transition"
+        className="mt-6 px-6 py-3 rounded-lg bg-brand-primary text-white font-medium hover:bg-brand-primaryDark transition cursor-pointer"
       >
         Browse Products
       </button>

@@ -33,7 +33,7 @@ export default function FavoritesPage() {
                 <h1 className="text-2xl font-bold">My Favorites ❤️</h1>
                 <button
                     onClick={() => dispatch(clearFavorites())}
-                    className="cursor-pointer px-4 py-2 rounded-md border border-[#14a085] text-[#14a085]  hover:bg-[#14a085] hover:text-white transition"
+                    className="cursor-pointer px-4 py-2 rounded-md border border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-200"
                 >
                     Clear All
                 </button>

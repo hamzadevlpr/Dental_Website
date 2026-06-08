@@ -18,7 +18,7 @@ export default function ResetPasswordPage() {
     <div>
       <h2 className="text-2xl font-bold mb-6">Reset Password</h2>
       {success ? (
-        <p className="text-green-600">Password reset successful ✅</p>
+        <p className="text-brand-secondary font-semibold">Password reset successful ✅</p>
       ) : (
         <>
           <form onSubmit={handleReset} className="space-y-4">

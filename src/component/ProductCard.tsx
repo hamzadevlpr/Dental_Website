@@ -15,7 +15,7 @@ export interface ProductType {
   discountedPrice?: number
   price: number
   category: string
-  quantity: number
+  quantity?: number
 }
 
 interface PropsType {
@@ -42,15 +42,15 @@ const ProductCard: React.FC<PropsType> = ({ product }) => {
   }
 
   return (
-    <div className="rounded-2xl border-[#14a085] border bg-white p-[6px]">
+    <div className="rounded-2xl border-brand-primary/15 border bg-white p-[6px] hover:shadow-[0_8px_30px_rgba(30,123,243,0.12)] transition-all duration-300">
       <div className="relative flex h-[180px] w-full items-center justify-center rounded-xl p-4">
         <img src={image} alt={`${title} image`} className="max-h-full max-w-full object-contain" />
         {discount && (
-          <span className="absolute top-2 left-2 rounded-md bg-[#14a085] px-2 py-1 text-sm text-white">
+          <span className="absolute top-2 left-2 rounded-md bg-brand-primary px-2 py-1 text-sm text-white font-semibold">
             -{discount}%
           </span>
         )}
-        <button onClick={hanleFavorite} className="cursor-pointer group absolute top-2 right-1 rounded-md px-2 py-1 text-sm text-[#14a085]">
+        <button onClick={hanleFavorite} className="cursor-pointer group absolute top-2 right-1 rounded-md px-2 py-1 text-sm text-brand-primary">
           <Heart
             size={24}
             className={`stroke-current fill-${isFavorite ? "current" : "transparent"} group-hover:fill-current transition-colors`}
@@ -63,7 +63,7 @@ const ProductCard: React.FC<PropsType> = ({ product }) => {
         <h3 className="my-2 line-clamp-2 text-sm font-medium sm:h-12">{title}</h3>
 
         <div className="mb-2 flex items-center">
-          <span className="mr-2 text-lg font-medium text-[#14a085]">PKR {price}</span>
+          <span className="mr-2 text-lg font-medium text-brand-primary">PKR {price}</span>
           {discountedPrice && (
             <span className="font-medium text-[#C9C9C9] line-through">PKR {discountedPrice}</span>
           )}
@@ -72,14 +72,14 @@ const ProductCard: React.FC<PropsType> = ({ product }) => {
         <div className="flex gap-[10px]">
           <button
             onClick={handleShowProductInfo}
-            className="cursor-pointer rounded-md bg-[#d7fdf6] p-2 hover:bg-[#aef5e8] focus:outline-[#e1e2e6]"
+            className="cursor-pointer rounded-md bg-brand-primary/10 p-2 hover:bg-brand-primary/20 focus:outline-brand-primary"
             aria-label={`View details of ${title}`}
           >
-            <BadgeInfo color="#C9C9C9" />
+            <BadgeInfo className="text-brand-primary" />
           </button>
           <button
             onClick={handleAddToCart}
-            className="cursor-pointer w-full rounded-md bg-[#d7fdf6] py-[6px] font-medium text-[#14a085] hover:bg-[#aef5e8] focus:outline-[#e1e2e6]"
+            className="cursor-pointer w-full rounded-md bg-brand-primary/10 py-[6px] font-medium text-brand-primary hover:bg-brand-primary/20 focus:outline-brand-primary"
           >
             Add to cart
           </button>

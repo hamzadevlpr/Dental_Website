@@ -1,5 +1,5 @@
 import { Menu } from 'lucide-react';
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function SidebarCategories() {
     const categories = [
@@ -13,20 +13,24 @@ export default function SidebarCategories() {
         "Endodontics",
         "Others"
     ];
-    const randomColors = [
-        "bg-[#14a085]", "bg-[#e67e22]", "bg-[#8e44ad]", "bg-[#3498db]", "bg-[#e74c3c]", "bg-[#2ecc71]", "bg-[#f39c12]", "bg-[#1abc9c]", "bg-[#9b59b6]"
-    ];
+    const [activeIndex, setActiveIndex] = useState(0);
+    
     return (
-        <div className="lg:col-span-3 col-span-12 bg-white rounded-lg">
-            <div className="flex gap-2 items-center mb-4">
-                <Menu />
-                <h2 className="font-medium text-sm">Browse Categories</h2>
+        <div className="lg:col-span-3 col-span-12 bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+            <div className="flex gap-2 items-center mb-4 text-brand-primary">
+                <Menu size={18} />
+                <h2 className="font-semibold text-sm tracking-wider uppercase">Browse Categories</h2>
             </div>
-            <ul className="">
+            <ul className="space-y-1">
                 {categories.map((cat, i) => (
                     <li
                         key={cat}
-                        className={`text-white text-sm font-medium px-6 py-2 cursor-pointer hover:opacity-80 transition ${randomColors[i]}`}
+                        onClick={() => setActiveIndex(i)}
+                        className={`text-sm font-medium px-4 py-2.5 rounded-lg cursor-pointer transition-all duration-200 ${
+                            activeIndex === i 
+                                ? "bg-brand-primary text-white shadow-md shadow-brand-primary/20" 
+                                : "text-gray-700 hover:bg-brand-primaryDark hover:text-white"
+                        }`}
                     >
                         {cat}
                     </li>

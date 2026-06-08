@@ -51,11 +51,11 @@ export default function SignupPage() {
       </div>
       <p className="text-xs text-gray-600 text-center mt-3">
         By continuing, you agree to our{" "}
-        <Link href="/terms" className="text-[#14a085] hover:underline">
+        <Link href="/terms" className="text-brand-primaryDark hover:underline font-medium transition-colors">
           Terms of Service
         </Link>{" "}
         and{" "}
-        <Link href="/privacy" className="text-[#14a085] hover:underline">
+        <Link href="/privacy" className="text-brand-primaryDark hover:underline font-medium transition-colors">
           Privacy Policy
         </Link>
         .
@@ -63,7 +63,7 @@ export default function SignupPage() {
 
       <div className="text-sm text-center mt-4">
         Already have an account?{" "}
-        <Link href="/auth/login" className="text-[#14a085] hover:underline">
+        <Link href="/auth/login" className="text-brand-primaryDark hover:underline font-medium transition-colors">
           Login
         </Link>
       </div>

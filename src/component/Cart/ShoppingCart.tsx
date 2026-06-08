@@ -14,7 +14,7 @@ export default function ShoppingCart() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cartSlice.items);
   const subtotal = cartItems.reduce(
-    (sum: number, p: ProductType) => sum + p.price * p.quantity,
+    (sum: number, p: ProductType) => sum + p.price * (p.quantity ?? 1),
     0
   );
 
@@ -60,12 +60,12 @@ export default function ShoppingCart() {
                   </td>
                   <td className="text-gray-700">PKR {p.price}</td>
                   <td>
-                    <div className="flex items-center border rounded-md w-max border-[#14a085]">
+                    <div className="flex items-center border rounded-md w-max border-brand-primary">
                       <button
                         onClick={() =>
                           dispatch(updateQuantity({ id: p.id, change: -1 }))
                         }
-                        className="px-2 py-1 rounded-l bg-gray-200 hover:bg-gray-300 focus:outline-none"
+                        className="px-2 py-1 rounded-l bg-gray-200 hover:bg-gray-300 focus:outline-none cursor-pointer"
                       >
                         -
                       </button>
@@ -74,14 +74,14 @@ export default function ShoppingCart() {
                         onClick={() =>
                           dispatch(updateQuantity({ id: p.id, change: 1 }))
                         }
-                        className="px-2 py-1 rounded-r bg-[#14a085] text-white hover:bg-[#11806c] focus:outline-none"
+                        className="px-2 py-1 rounded-r bg-brand-primary text-white hover:bg-brand-primaryDark focus:outline-none cursor-pointer"
                       >
                         +
                       </button>
                     </div>
                   </td>
                   <td className="font-medium text-gray-800">
-                    PKR {p.price * p.quantity}
+                    PKR {p.price * (p.quantity ?? 1)}
                   </td>
                   <td>
                     <button
@@ -122,13 +122,13 @@ export default function ShoppingCart() {
               placeholder="Promo code"
               value={promo}
               onChange={(e) => setPromo(e.target.value)}
-              className="flex-1 px-3 py-2 border rounded-md focus:ring-[#14a085] focus:outline-none"
+              className="flex-1 px-3 py-2 border rounded-md focus:ring-brand-primary focus:outline-none"
             />
-            <button className="px-4 py-2 rounded-md bg-[#14a085] text-white font-medium hover:bg-[#11806c]">
+            <button className="px-4 py-2 rounded-md bg-brand-primary text-white font-medium hover:bg-brand-primaryDark cursor-pointer transition">
               Apply
             </button>
           </div>
-          <button onClick={handleCheckout} className="mt-3 w-full py-3 rounded-md font-medium text-white bg-[#14a085] hover:bg-[#11806c] focus:ring focus:ring-[#14a085] focus:outline-none">
+          <button onClick={handleCheckout} className="mt-3 w-full py-3 rounded-md font-medium text-white bg-brand-primary hover:bg-brand-primaryDark focus:ring focus:ring-brand-primary focus:outline-none cursor-pointer transition">
             Proceed to Checkout
           </button>
 
@@ -139,7 +139,7 @@ export default function ShoppingCart() {
               ✉️{" "}
               <a
                 href="mailto:info@edentalmart.com"
-                className="text-[#14a085] hover:underline"
+                className="text-brand-primary hover:underline"
               >
                 info@edentalmart.com
               </a>

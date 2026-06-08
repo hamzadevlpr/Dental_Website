@@ -47,13 +47,13 @@ export default function LoginPage() {
       </div>
 
       <div className="text-sm text-center mt-4">
-        <Link href="/auth/forgot" className="text-[#14a085] hover:underline">
+        <Link href="/auth/forgot" className="text-brand-primaryDark hover:underline font-medium transition-colors">
           Forgot password?
         </Link>
       </div>
       <div className="text-sm text-center mt-2">
         Don’t have an account?{" "}
-        <Link href="/auth/signup" className="text-[#14a085] hover:underline">
+        <Link href="/auth/signup" className="text-brand-primaryDark hover:underline font-medium transition-colors">
           Sign up
         </Link>
       </div>

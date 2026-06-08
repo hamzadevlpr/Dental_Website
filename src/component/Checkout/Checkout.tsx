@@ -94,25 +94,25 @@ export default function Checkout() {
               Payment Method
             </h3>
             <div className="space-y-2">
-              <label className="flex items-center gap-2">
+              <label className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="radio"
                   name="payment"
                   value="cod"
                   checked={payment === "cod"}
                   onChange={() => setPayment("cod")}
-                  className="text-[#14a085] focus:ring-[#14a085]"
+                  className="text-brand-primary focus:ring-brand-primary"
                 />
                 Cash on Delivery
               </label>
-              <label className="flex items-center gap-2">
+              <label className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="radio"
                   name="payment"
                   value="card"
                   checked={payment === "card"}
                   onChange={() => setPayment("card")}
-                  className="text-[#14a085] focus:ring-[#14a085]"
+                  className="text-brand-primary focus:ring-brand-primary"
                 />
                 Credit/Debit Card
               </label>
@@ -120,7 +120,7 @@ export default function Checkout() {
           </div>
 
           {/* Place Order */}
-          <button className="mt-6 w-full py-3 rounded-md font-medium text-white bg-[#14a085] hover:bg-[#11806c] focus:ring-2 focus:ring-[#14a085] focus:outline-none">
+          <button className="mt-6 w-full py-3 rounded-md font-medium text-white bg-brand-primary hover:bg-brand-primaryDark focus:ring-2 focus:ring-brand-primary focus:outline-none cursor-pointer transition">
             Place Order
           </button>
         </div>
